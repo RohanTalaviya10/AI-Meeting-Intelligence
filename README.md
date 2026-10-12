@@ -1,8 +1,19 @@
+---
+title: AI Meeting Intelligence
+colorFrom: blue
+colorTo: indigo
+sdk: streamlit
+sdk_version: 1.59.1
+app_file: app.py
+pinned: false
+---
+
 # AI Meeting Intelligence and Action Tracker
 
 A system that accepts meeting audio recordings (MP3/WAV), generates a transcript with speaker identification, extracts structured business information (summary, decisions, action items, assignees, deadlines, risks, and unresolved items), stores the results in SQLite, and provides an API and UI to query the conversation.
 
 Built using FastAPI, Streamlit, and Google Gemini 3.1 Flash-Lite.
+
 
 ---
 
@@ -48,6 +59,7 @@ AI-Meeting-Intelligence/
 ├── run.bat
 ├── postman_collection.json
 ├── main.py
+├── app.py
 ├── EXPLANATION.md
 └── README.md
 ```
