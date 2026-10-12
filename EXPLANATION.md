@@ -12,13 +12,13 @@ Here is why:
 - Running Whisper locally sounds good in theory, but in practice it forces anyone testing the code to download large model weights (1 to 3 GB), install FFmpeg, and often run into CUDA or C++ compiler headaches on Windows.
 - Services like AssemblyAI or Deepgram work well, but they require setting up extra accounts, credentials, and billing.
 - Gemini Flash takes audio formats (.wav, .mp3, .m4a) directly through the API.
-- By letting Gemini transcribe the audio natively, it tags speaker turns (like "Manager:", "Rahul:", "Priya:") directly in the transcript without needing a heavy second pipeline like pyannote.audio.
+- The biggest win was speaker diarization. By letting Gemini transcribe the audio natively, it tags speaker turns (like "Manager:", "Rahul:", "Priya:") directly in the transcript without needing a heavy second pipeline like pyannote.audio.
 
 ---
 
 ## 2. AI and Model Choice
 
-I picked `gemini-3.1-flash-lite`.
+I picked `gemini-3.1-flash-lite` (with `gemini-2.5-flash` as fallback).
 
 Why Flash instead of a larger model like Pro:
 - Speed and latency: Meeting audio files can be long. Flash generates responses significantly faster, which keeps the UI responsive.
