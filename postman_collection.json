@@ -1,0 +1,128 @@
+{
+  "info": {
+    "name": "AI Meeting Intelligence & Action Tracker API",
+    "description": "FastAPI collection for AI Meeting Intelligence powered by Gemini 3.1 Flash-Lite",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Health Check",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/api/health",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["api", "health"]
+        }
+      }
+    },
+    {
+      "name": "Upload Meeting Audio or Transcript",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "x-gemini-api-key",
+            "value": "{{GEMINI_API_KEY}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "file",
+              "type": "file",
+              "src": []
+            },
+            {
+              "key": "transcript_text",
+              "value": "Manager: We need to finalize the beta launch by 15 September.\nRahul: I can complete the payment API integration by 10 September.",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:8000/api/meetings/upload",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["api", "meetings", "upload"]
+        }
+      }
+    },
+    {
+      "name": "List Processed Meetings",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/api/meetings",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["api", "meetings"]
+        }
+      }
+    },
+    {
+      "name": "Get Meeting Details by ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/api/meetings/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["api", "meetings", "1"]
+        }
+      }
+    },
+    {
+      "name": "Natural Language Query on Meeting",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "x-gemini-api-key",
+            "value": "{{GEMINI_API_KEY}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"query\": \"What tasks were assigned to Rahul?\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8000/api/meetings/1/query",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["api", "meetings", "1", "query"]
+        }
+      }
+    },
+    {
+      "name": "Delete Meeting",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/api/meetings/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["api", "meetings", "1"]
+        }
+      }
+    }
+  ]
+}

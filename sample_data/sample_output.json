@@ -1,0 +1,60 @@
+{
+  "summary": "Team confirmed the beta launch date for 15 September and discussed payment API integration, QA test cases, mobile timeout investigation, and product pricing.",
+  "decisions": [
+    "Beta launch remains 15 September."
+  ],
+  "action_items": [
+    {
+      "task": "Complete payment API integration",
+      "assignee": "Rahul",
+      "deadline": "10 September",
+      "normalized_deadline": "2026-09-10",
+      "is_overdue": true,
+      "priority": "High",
+      "status": "Pending",
+      "confidence": 0.96
+    },
+    {
+      "task": "Prepare QA test cases",
+      "assignee": "Priya",
+      "deadline": "12 September",
+      "normalized_deadline": "2026-09-12",
+      "is_overdue": true,
+      "priority": "High",
+      "status": "Pending",
+      "confidence": 0.95
+    },
+    {
+      "task": "Investigate mobile timeout issue",
+      "assignee": "Rahul",
+      "deadline": "tomorrow",
+      "normalized_deadline": "2026-10-13",
+      "is_overdue": false,
+      "priority": "Medium",
+      "status": "Pending",
+      "confidence": 0.91
+    },
+    {
+      "task": "Provide Rahul access to payment gateway test account",
+      "assignee": "Manager",
+      "deadline": "today",
+      "normalized_deadline": "2026-10-12",
+      "is_overdue": false,
+      "priority": "High",
+      "status": "Pending",
+      "confidence": 0.98
+    }
+  ],
+  "risks_blockers": [
+    "Rahul requires access to the payment gateway test account."
+  ],
+  "unresolved_items": [
+    "Product pricing is not finalized (deferred to the next meeting)."
+  ],
+  "participants": [
+    "Manager",
+    "Rahul",
+    "Priya"
+  ],
+  "confidence_score": 0.95
+}

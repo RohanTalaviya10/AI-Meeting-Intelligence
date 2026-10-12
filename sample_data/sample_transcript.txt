@@ -1,0 +1,9 @@
+Manager: We need to finalize the beta launch by 15 September.
+Rahul: I can complete the payment API integration by 10 September.
+Priya: I will prepare the QA test cases by 12 September.
+Manager: Rahul, please also investigate the timeout issue reported by the mobile team.
+Rahul: I will check the timeout issue tomorrow.
+Priya: The product pricing is still not finalized.
+Manager: Let's discuss pricing in the next meeting. For now, the beta launch date remains 15 September.
+Rahul: I also need access to the payment gateway test account.
+Manager: I will provide that access today.
